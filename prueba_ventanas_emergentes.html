@@ -9,10 +9,18 @@
 	//open("http://www.pildorasinformaticas.es","Pildoras","width=300, height=200, left=200, top=300, scrolbars=no, toolbars=no");
 	//open("http://www.pildorasinformaticas.es","Pildoras1","width=300, height=200, left=300, top=300, scrolbars=no, toolbars=no");
 	//open("http://www.pildorasinformaticas.es","Pildoras2","width=300, height=200, left=400, top=300, scrolbars=no, toolbars=no");
-	var propVent="width=300, height=200, left=400, top=300, scrolbars=no, toolbars=no";
-	open("http://www.pildorasinformaticas.es","Pildoras",propVent);
 	
-	
+	$(document).ready(function(){
+
+		var propVent="width=300, height=200, left=400, top=300, scrolbars=no, toolbars=no";
+		var miVentana=open("http://www.pildorasinformaticas.es","Pildoras",propVent);
+		
+		$("#botonCerrar").click(function(e){
+
+			e.preventDefault();
+			miVentana.close();
+		});
+	});
 
 </script>
 </head>
